@@ -4,6 +4,7 @@ import StyledButton from "../StyledButton";
 import styles from './styles';
 
 const CarItem = () => {
+  
   return (
     <View style={styles.carContainer}>
       <ImageBackground
@@ -15,7 +16,21 @@ const CarItem = () => {
         <Text style={styles.subtitle}>Starting at $69,420</Text>
       </View>
       
-      <StyledButton />
+      <StyledButton 
+        type="primary" 
+        content={"Custom Order"} 
+        onPress={() => {
+          console.log("Custom Order was pressed.")
+        }} 
+      />
+
+      <StyledButton 
+        type="secondary" 
+        content={"Existing Inventory"} 
+        onPress={() => {
+          console.log("Existing Inventory was pressed.")
+        }} 
+      />
 
     </View>
   );
